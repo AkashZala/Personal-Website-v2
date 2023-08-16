@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Akash Zala</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
 </head>
+
 <body>
     <div class="navContainer">
         <h1 id="name">AKASH ZALA</h1>
@@ -17,20 +19,42 @@
             <a href="contact.html" class="active">CONTACT</a>
         </nav>
     </div>
-    
-    <h1>CONTACT</h1>
-    <div>
-        <form action="confirm.html">
-            <label for="firstName">First Name:</label><br/>
-            <input type="text" name="firstName"/><br/>
-            <label for="lastName">Last Name:</label><br/>
-            <input type="text" name="lastName"/><br/>
-            <label for="email">Email:</label><br/>
-            <input type="email" name="email"/><br/>
-            <label for="message">Message:</label><br/>
-            <textarea name="message" rows="5" cols="50"></textarea><br/>
-            <button type="submit">Submit</button>
-        </form>
+
+    <div class="content">
+        <h1>Questions? Feel free to contact me! </h1>
+        <p>
+            If you would like to reach out to me, please fill out the form below.
+        </p>
+        <div>
+            <form action="confirm.html">
+                <div class="flexcontactcont">
+                    <section class="flexcontact">
+                        <label for="firstName">First Name:</label><br />
+                        <input type="text" name="firstName" />
+                    </section>
+                    <section class="flexcontact">
+                        <label for="lastName">Last Name:</label><br />
+                        <input type="text" name="lastName" /><br />
+                    </section>
+                    <section class="flexcontact">
+                        <label for="email">Email:</label><br />
+                        <input type="email" name="email" /><br />
+                    </section>
+                    <section class="flexcontact">
+                        <label for="message">Message:</label><br />
+                        <textarea name="message"></textarea><br />
+                    </section>
+                    <section class="flexcontact">
+                        <button type="submit">Submit</button> 
+                    </section>
+                </div>
+                    
+                
+            </form>
+       
     </div>
+    </div>
+    
 </body>
+
 </html>

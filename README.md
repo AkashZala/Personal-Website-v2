@@ -4,4 +4,4 @@
 
 ## Has a landing page (home), interests (about), projects that I have been apart of (portfolio), and includes a form to contact me (contact).
 
-## Updated from the first personal website to use more advanced styling techniques and upgraded design elements.
+## Updated from the first personal website to use more advanced styling techniques and upgraded design elements. New contact page with form.

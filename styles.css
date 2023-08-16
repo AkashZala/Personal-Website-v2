@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
-} 
+}
+
 html {
-    background-color: rgb(174, 233, 157);
+    background-color: rgba(17, 151, 91, 0.771);
     text-shadow: .5px .5px 1px rgba(0, 0, 0, 0.654);
 }
 
@@ -17,18 +18,17 @@ body {
 
 .navContainer {
     background-color: whitesmoke;
-    position:fixed;
+    position: fixed;
     padding-bottom: 1%;
     left: 0;
     right: 0;
     top: 0;
     box-shadow: 1px 1px 5px;
-    
+
 }
 
-img {
-    width: 25%;
-    margin: 5% 0 5% 0;
+#landingimg {
+    width: 30%;
 }
 
 #name {
@@ -42,16 +42,16 @@ img {
 }
 
 .navBar {
-    display:flex;
+    display: flex;
     width: 60%;
     margin: 3% 0 0 0;
 }
 
-nav > a {
+nav>a {
     color: rgb(4, 67, 39);
     text-decoration: none;
-    font-size: 1.5rem;  
-    float:left;
+    font-size: 1.5rem;
+    float: left;
     text-align: center;
     padding: 0 2% 0 2%;
     margin: 0 2% 0 2%;
@@ -66,17 +66,15 @@ nav > a {
 .inactive:hover {
     background-color: rgba(17, 151, 91, 0.771);
     color: whitesmoke;
+    transition: .3s;
 }
 
 .content {
     min-height: 100vh;
-    /* border: solid 1px orange; */
     color: whitesmoke;
     margin: 0px 2vw 0 2vw;
     padding: 0 0 0 0;
 }
-
-
 
 .homecontent {
     align-items: center;
@@ -88,43 +86,91 @@ nav > a {
     font-size: 3rem;
     text-align: center;
     margin: 0 0 15% 0;
-    font-weight:bold;
+    font-weight: bold;
     font-style: italic;
 }
 
-.aboutcontent {
+.flexcont {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.aboutsection {
+.flexsection {
     width: calc(100% / 3);
     padding: 0 1% 1% 2%;
     border: 3px solid whitesmoke;
     margin: 0 0 2% 0;
 }
 
-.aboutsection:first-child {
+.flexsection:first-child {
     border-radius: 1rem 0 0 1rem;
     border-right-width: 0px;
 }
 
-.aboutsection:last-child {
+.flexsection:last-child {
     border-radius: 0 1rem 1rem 0;
     border-left-width: 0px;
 }
 
-.aboutsection > img {
-    width: 25vw;
+img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.aboutsection > h3 {
+.flexsection>h3 {
     text-align: center;
 }
 
+.flexcontactcont {
+    height: 70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
+}
 
+.flexcontact {
+    height: 80%;
+    width: 100%;
+    padding: 2% 0 5% 5%;
+    margin: 0 0 0 0;
+    border-left: 3px solid whitesmoke;
+    border-right: 3px solid whitesmoke;
+    
+}
+.flexcontact:first-child {
+    border-top: 3px solid whitesmoke;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.flexcontact:last-child {
+    margin-top: 0;
+    border-bottom: 3px solid whitesmoke;
+    border-radius: 0 0 1rem 1rem;
+}
+
+textarea {
+    width: 50%;
+    height: 5rem;
+}
+
+input {
+    width:25%;
+}
+
+.confirmation {
+    margin-left: 10%;
+}
+
+.navconfirm {
+    color: rgb(4, 67, 39);
+    height:80px;
+    padding-left: 10%;
+
+}
 
 @media (max-width: 450px) {
     body {
@@ -139,7 +185,7 @@ nav > a {
         flex-direction: column;
     }
 
-    nav > a {
+    nav>a {
         padding: 0 0 0 0;
         text-align: left;
     }
@@ -151,40 +197,48 @@ nav > a {
 
     .inactive:hover {
         font-weight: bold;
-        color:  rgba(17, 151, 91, 0.771);
+        color: rgba(17, 151, 91, 0.771);
         background-color: whitesmoke;
+
     }
-    
-    .aboutcontent {
+
+    .flexcont {
         flex-direction: column;
     }
-    
-    .aboutsection {
+
+    .flexsection {
         width: 100%;
         margin: 0 0 0 0;
         border: 3px solid whitesmoke;
         align-items: center;
-        
+
     }
 
-    .aboutsection > img {
-        display: block;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .aboutsection:first-child {
+    .flexsection:first-child {
         border-radius: 1rem 1rem 0 0;
         border-bottom-width: 0px;
         border-right-width: 3px;
     }
-    
-    .aboutsection:last-child {
+
+    .flexsection:last-child {
         border-radius: 0 0 1rem 1rem;
         border-top-width: 0px;
         border-left-width: 3px;
         margin: 0 0 2% 0;
     }
-    
+
+    .flexcontact {
+        height: 20%;
+        width: 100%;
+        padding: 5% 0 7% 5%;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    input {
+width:90%;
+    }
+
 }
