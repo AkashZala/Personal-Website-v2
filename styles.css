@@ -26,6 +26,11 @@ body {
     
 }
 
+img {
+    width: 25%;
+    margin: 5% 0 5% 0;
+}
+
 #name {
     color: rgb(4, 67, 39);
     font-family: courier;
@@ -39,7 +44,7 @@ body {
 .navBar {
     display:flex;
     width: 60%;
-    margin: 2% 0 0 0;
+    margin: 3% 0 0 0;
 }
 
 nav > a {
@@ -51,7 +56,16 @@ nav > a {
     padding: 0 2% 0 2%;
     margin: 0 2% 0 2%;
     border-radius: 1rem;
+}
 
+.active {
+    border-radius: 0;
+    border-bottom: solid 2px rgb(86, 86, 86);
+}
+
+.inactive:hover {
+    background-color: rgba(17, 151, 91, 0.771);
+    color: whitesmoke;
 }
 
 .content {
@@ -60,13 +74,13 @@ nav > a {
     color: whitesmoke;
     margin: 0px 2vw 0 2vw;
     padding: 0 0 0 0;
-    align-items: center;
-    text-align: center;
 }
 
-.content > img {
-    width: 25%;
-    margin: 5% 0 5% 0;
+
+
+.homecontent {
+    align-items: center;
+    text-align: center;
 }
 
 .quote {
@@ -78,12 +92,99 @@ nav > a {
     font-style: italic;
 }
 
-.active {
-    border-radius: 0;
-    border-bottom: solid 2px rgb(86, 86, 86);
+.aboutcontent {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
-.inactive:hover {
-    background-color: rgba(17, 151, 91, 0.771);
-    color: whitesmoke;
+.aboutsection {
+    width: calc(100% / 3);
+    padding: 0 1% 1% 2%;
+    border: 3px solid whitesmoke;
+    margin: 0 0 2% 0;
+}
+
+.aboutsection:first-child {
+    border-radius: 1rem 0 0 1rem;
+    border-right-width: 0px;
+}
+
+.aboutsection:last-child {
+    border-radius: 0 1rem 1rem 0;
+    border-left-width: 0px;
+}
+
+.aboutsection > img {
+    width: 25vw;
+}
+
+.aboutsection > h3 {
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 450px) {
+    body {
+        padding: 220px 0 0 0;
+    }
+
+    .navContainer {
+        padding: 0 0 0 5%;
+    }
+
+    .navBar {
+        flex-direction: column;
+    }
+
+    nav > a {
+        padding: 0 0 0 0;
+        text-align: left;
+    }
+
+    .active {
+        border-bottom: none;
+        text-decoration: underline;
+    }
+
+    .inactive:hover {
+        font-weight: bold;
+        color:  rgba(17, 151, 91, 0.771);
+        background-color: whitesmoke;
+    }
+    
+    .aboutcontent {
+        flex-direction: column;
+    }
+    
+    .aboutsection {
+        width: 100%;
+        margin: 0 0 0 0;
+        border: 3px solid whitesmoke;
+        align-items: center;
+        
+    }
+
+    .aboutsection > img {
+        display: block;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aboutsection:first-child {
+        border-radius: 1rem 1rem 0 0;
+        border-bottom-width: 0px;
+        border-right-width: 3px;
+    }
+    
+    .aboutsection:last-child {
+        border-radius: 0 0 1rem 1rem;
+        border-top-width: 0px;
+        border-left-width: 3px;
+        margin: 0 0 2% 0;
+    }
+    
 }
